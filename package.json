@@ -4,7 +4,7 @@
   "homepage": "https://github.com/portable-cto/airtable-proxy-worker",
   "description": "A Cloudflare Worker that will proxy requests to the Airtable API",
   "scripts": {
-    "build": "AIRTABLE_API_KEY=keyMw00GDuZSOACuD AIRTABLE_API_BASE_ID=appViMIWWjFK9aiMu PROXY_CACHE_TIME=3600 ALLOWED_TARGETS='[{\"resource\":\"News\",\"method\":\"GET\"}, {\"resource\":\"Translations\",\"method\":\"GET\"}, {\"resource\":\"Media\",\"method\":\"GET\"}]' webpack -p --progress --colors",
+    "build": "AIRTABLE_API_KEY=keyMw00GDuZSOACuD AIRTABLE_API_BASE_ID=appViMIWWjFK9aiMu PROXY_CACHE_TIME=3600 ALLOWED_TARGETS='[{\"resource\":\"News\",\"method\":\"GET\"}, {\"resource\":\"Translations\",\"method\":\"GET\"}, {\"resource\":\"Presskits\",\"method\":\"GET\"}, {\"resource\":\"Media\",\"method\":\"GET\"}]' webpack -p --progress --colors",
     "prettier": "prettier --write 'src/*.js'",
     "lint": "prettier --list-different 'src/*.js'",
     "test": "npm run lint --silent && jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
